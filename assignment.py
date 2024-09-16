@@ -4,7 +4,8 @@
 def loop_over_list():
     """Loop over a list of fruits and print each one"""
     pcc_4_list = ['apple', 'banana', 'carrot', 'date']
-    raise NotImplementedError
+    for x in pcc_4_list:
+        print(x)
     
 
 #4.2

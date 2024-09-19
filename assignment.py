@@ -1,5 +1,3 @@
-#Chapter 4 Assignment
-
 #4.1
 def loop_over_list():
     """Loop over a list of fruits and print each one"""
@@ -15,26 +13,35 @@ def loop_over_list_and_capitalize():
         1: Banana ..."""
     #Remember to use the variable name my_list
     my_list = ["apple", "banana", "carrot", "date"]
-    raise NotImplementedError
+    for (i, item) in enumerate(my_list):
+        print(f"{i}: {item.title()}")
+loop_over_list_and_capitalize()
     
 #4.3
 def print_numbers_1_to_10():
     """Print the numbers 1 to 10 using a for loop"""
-    raise NotImplementedError
+    for i in range(1,11):
+        print(i)
+print_numbers_1_to_10()
     
 #4.4
 def print_numbers_1_to_n():
     """Print the numbers 1 to n"""
     n = 15
+    for i in range(1,n+1):
+        print(i)
+print_numbers_1_to_n()
 
-    raise NotImplementedError
+
     
 #4.5
 def create_list_of_numbers(n: int) -> list:
     """Create a list of numbers from 1 to n
     return the list"""
     #Remember to use the variable name n
-    raise NotImplementedError
+    lst = list(range(1,n+1))
+    return lst
+
     
 
 #4.6
@@ -42,20 +49,26 @@ def create_list_of_even_numbers(n: int) -> list:
     """Create a list of even numbers from 1 to n
     return the list"""
     #Remember to use the variable name n
-    raise NotImplementedError
+    lst = list(range(2,n+2,2))
+    return lst
     
 #4.7
 def create_list_of_first_ten_cube_numbers() -> list:
     """Create a list of the first ten square numbers
     return the list"""
-    raise NotImplementedError
+    Cubes=[]
+    for i in range(1,11):
+       Cubes.append(i**3)
+    return Cubes
     
 #4.8
 def create_list_comprehension_of_first_ten_cube_numbers() -> list:
     """Create a list of the first ten square numbers
     using list comprehension
     return the list"""
-    raise NotImplementedError
+    numbers = list(range(1,11))
+    cubed = [x**3 for x in numbers]
+    return cubed
     
 #4.9
 def copy_list_and_append_11(my_list: list) -> list:
@@ -63,7 +76,10 @@ def copy_list_and_append_11(my_list: list) -> list:
     return the new list
     Make sure not to modify the original list"""
     #Remember to use the variable name my_list
-    raise NotImplementedError
+    lst = my_list.copy()
+    lst.append(11)
+    return lst
+
     
 #4.10
 def return_first_index_of_tuple(my_tuple: tuple) -> int:
@@ -71,12 +87,12 @@ def return_first_index_of_tuple(my_tuple: tuple) -> int:
     return the first index
     Remember that a tuple is like a list but immutable"""
     #Remember to use the variable name my_tuple
-    raise NotImplementedError
+    return my_tuple[0]
     
 #4.11
 def loop_over_tuple():
     """Loop over the tuple and print each item"""
     #Remember to use the variable name my_tuple
     my_tuple = (1, 2, 3, 4, 5)
-    raise NotImplementedError
-    
+    for x in my_tuple:
+        print(x)
